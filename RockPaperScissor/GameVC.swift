@@ -20,10 +20,12 @@ class GameVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
     
     @IBAction func paper(sender: AnyObject) {
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! ResultsVC
-        controller.playerPicked = 3
+        controller.playerPicked = 2
         self.presentViewController(controller, animated: true, completion: nil)
         
     }
@@ -32,7 +34,7 @@ class GameVC: UIViewController {
 
     @IBAction func scissor(sender: AnyObject) {
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewController") as! ResultsVC
-        controller.playerPicked = 2
+        controller.playerPicked = 3
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
